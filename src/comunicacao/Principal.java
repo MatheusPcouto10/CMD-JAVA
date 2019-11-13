@@ -12,7 +12,7 @@ public class Principal {
 		boolean ativo = true;
 
 		while (ativo == true) {
-			
+
 			// MENU PRINCIPAL
 			Scanner sc = new Scanner(System.in);
 			System.out.println("======== CMD JAVA ========");
