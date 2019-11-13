@@ -19,18 +19,19 @@ public class Principal {
 			System.out.println("ESCOLHA O COMANDO: ");
 			System.out.println("(1) - LISTAR TODOS OS DIRETÓRIOS");
 			System.out.println("(2) - MOSTRAR A VERSÃO ATUAL DO WINDOWS");
-			System.out.println("(3) - MOSTRAR A DATA ATUAL");
-			System.out.println("(4) - MOSTRAR A HORA ATUAL");
-			System.out.println("(5) - MOSTRAR A VERSÃO ATUAL DO JAVA");
-			System.out.println("(6) - CRIAR UMA PASTA/DIRETÓRIO");
-			System.out.println("(7) - CRIAR E INSERIR TEXTO EM UM ARQUIVO");
-			System.out.println("(8) - RENOMEAR ARQUIVO");
-			System.out.println("(9) - RENOMEAR PASTA/DIRETÓRIO");
-			System.out.println("(10) - MOVER ARQUIVO PARA UM NOVO DIRETÓRIO");
-			System.out.println("(11) - DELETAR PASTA/DIRETÓRIO");
-			System.out.println("(12) - DELETAR ARQUIVO");
-			System.out.println("(13) - LIMPAR CONSOLE");
-			System.out.println("(14) - SAIR DO CMD");
+			System.out.println("(3) - MOSTRAR A VERSÃO ATUAL DO JAVA");
+			System.out.println("(4) - MOSTRAR AS PROPRIEDADES DE CONEXÃO");
+			System.out.println("(5) - MOSTRAR A DATA ATUAL");
+			System.out.println("(6) - MOSTRAR A HORA ATUAL");
+			System.out.println("(7) - CRIAR UMA PASTA/DIRETÓRIO");
+			System.out.println("(8) - CRIAR E INSERIR TEXTO EM UM ARQUIVO");
+			System.out.println("(9) - RENOMEAR ARQUIVO");
+			System.out.println("(10) - RENOMEAR PASTA/DIRETÓRIO");
+			System.out.println("(11) - MOVER ARQUIVO PARA UM NOVO DIRETÓRIO");
+			System.out.println("(12) - DELETAR PASTA/DIRETÓRIO");
+			System.out.println("(13) - DELETAR ARQUIVO");
+			System.out.println("(14) - LIMPAR CONSOLE");
+			System.out.println("(15) - SAIR DO CMD");
 
 			int i = sc.nextInt();
 			sc.nextLine();
@@ -44,41 +45,46 @@ public class Principal {
 				System.out.println("\n");
 				break;
 			case 3:
-				terminal.executarComando("date /t");
+				terminal.executarComando("java --version");
 				System.out.println("\n");
 				break;
 			case 4:
-				terminal.executarComando("time /t");
+				terminal.executarComando("ipconfig");
 				System.out.println("\n");
 				break;
 			case 5:
-				terminal.executarComando("java --version");
+				terminal.executarComando("date /t");
+				System.out.println("\n");
 				break;
 			case 6:
-				terminal.criarDiretorio();
+				terminal.executarComando("time /t");
+				System.out.println("\n");
 				break;
 			case 7:
-				terminal.criarArquivo();
+				terminal.criarDiretorio();
 				break;
 			case 8:
-				terminal.renomearArquivo();
+				terminal.criarArquivo();
 				break;
 			case 9:
-				terminal.renomearDiretorio();
+				terminal.renomearArquivo();
 				break;
 			case 10:
-				terminal.moverArquivo();
+				terminal.renomearDiretorio();
 				break;
 			case 11:
-				terminal.deletarDiretorio();
+				terminal.moverArquivo();
 				break;
 			case 12:
-				terminal.deletarArquivo();
+				terminal.deletarDiretorio();
 				break;
 			case 13:
-				terminal.limparConsole();
+				terminal.deletarArquivo();
 				break;
 			case 14:
+				terminal.limparConsole();
+				break;
+			case 15:
 				ativo = false;
 			default:
 				break;

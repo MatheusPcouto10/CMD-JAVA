@@ -75,7 +75,7 @@ public class Terminal {
 
 		System.out.println("Digite o nome do arquivo que deseja mover: \n");
 		arquivo = sc.nextLine();
-		System.out.println("\n Insira o novo destino do arquivo : \n");
+		System.out.println("\n Cole aqui o destino do arquivo : \n");
 		arquivoMovido = sc.nextLine();
 
 		// Arquivo que será movido
