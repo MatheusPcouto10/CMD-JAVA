@@ -27,8 +27,20 @@ public class Terminal {
 		}
 	}
 
+	public void listarArquivos() {
+		System.out.println("Cole aqui o caminho do diretório para mostrar seus arquivos: \n");
+		diretorioAcessado = sc.nextLine();
+
+		File file = new File(diretorioAcessado);
+		File[] arquivos = file.listFiles(); // vetor para armazenar os arquivos do diretorio
+
+		for (File fileTmp : arquivos) {
+			System.out.println("\n" + fileTmp.getName());
+		}
+	}
+
 	public void acessarDiretorio() throws IOException {
-		
+
 		System.out.println("Cole aqui o caminho do diretório que deseja acessar: \n");
 		diretorioAcessado = sc.nextLine();
 
@@ -38,7 +50,7 @@ public class Terminal {
 	}
 
 	public void criarDiretorio() throws IOException {
-		
+
 		if (diretorioAcessado != null) {
 			System.out.println("Digite o nome da pasta: \n"); // Nome da pasta que será criada
 			pasta = sc.nextLine();
@@ -56,7 +68,7 @@ public class Terminal {
 	}
 
 	public void criarArquivo() throws IOException {
-		
+
 		if (diretorioAcessado != null) {
 			System.out.printf("Digite o nome do arquivo: \n");// Nome do arquivo que será criado
 			arquivo = sc.nextLine();
@@ -84,7 +96,7 @@ public class Terminal {
 	}
 
 	public void renomearArquivo() throws IOException {
-		
+
 		if (diretorioAcessado != null) {
 			System.out.println("Digite o nome do arquivo que deseja renomear: \n");// Arquivo a ser renomeado
 			arquivo = sc.nextLine();
@@ -102,7 +114,7 @@ public class Terminal {
 	}
 
 	public void renomearDiretorio() throws IOException {
-		
+
 		if (diretorioAcessado != null) {
 			System.out.println("Digite o nome da pasta que deseja renomear: \n");// Pasta a ser renomeada
 			pasta = sc.nextLine();
@@ -121,7 +133,7 @@ public class Terminal {
 	}
 
 	public void moverArquivo() throws IOException {
-		
+
 		if (diretorioAcessado != null) {
 			System.out.println("Digite o nome do arquivo que deseja mover: \n");// Arquivo a ser movido
 			arquivo = sc.nextLine();
@@ -148,7 +160,7 @@ public class Terminal {
 	}
 
 	public void deletarDiretorio() throws IOException {
-		
+
 		if (diretorioAcessado != null) {
 			System.out.println("Digite o nome da pasta que deseja deletar: \n");
 			pasta = sc.nextLine();
@@ -164,7 +176,7 @@ public class Terminal {
 	}
 
 	public void deletarArquivo() throws IOException {
-		
+
 		if (diretorioAcessado != null) {
 			System.out.println("Digite o nome do arquivo que deseja deletar: \n");
 			arquivo = sc.nextLine();

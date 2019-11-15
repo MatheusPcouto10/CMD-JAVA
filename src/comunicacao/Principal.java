@@ -17,7 +17,7 @@ public class Principal {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("======== CMD JAVA ========");
 			System.out.println("ESCOLHA O COMANDO: ");
-			System.out.println("(1) - LISTAR TODOS OS DIRETÓRIOS");
+			System.out.println("(1) - LISTAR TODOS OS ARQUIVOS DE UM DIRETÓRIO");
 			System.out.println("(2) - ACESSAR UM DIRETÓRIO");
 			System.out.println("(3) - MOSTRAR A VERSÃO ATUAL DO WINDOWS");
 			System.out.println("(4) - MOSTRAR A VERSÃO ATUAL DO JAVA");
@@ -38,7 +38,7 @@ public class Principal {
 			sc.nextLine();
 			switch (i) {
 			case 1:
-				terminal.executarComando("dir");
+				terminal.listarArquivos();
 				System.out.println("\n");
 				break;
 			case 2:
