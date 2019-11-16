@@ -17,6 +17,7 @@ public class Terminal {
 	String pastaRenomeada;
 	String arquivoMovido;
 	String diretorioAcessado;
+	String programa;
 
 	ProcessBuilder processBuilder = new ProcessBuilder();
 	Scanner sc = new Scanner(System.in);
@@ -37,6 +38,17 @@ public class Terminal {
 		for (File fileTmp : arquivos) {
 			System.out.println("\n" + fileTmp.getName());
 		}
+	}
+
+	public void abrirPrograma() throws IOException {
+
+		System.out.println("Digite o nome do programa que deseja abrir: \n");
+		programa = sc.nextLine();
+
+		Runtime.getRuntime().exec(programa);
+
+		System.out.println("O Programa está abrindo! \n");
+
 	}
 
 	public void acessarDiretorio() throws IOException {
@@ -185,7 +197,8 @@ public class Terminal {
 			arquivoDeletado.delete();
 			System.out.println("\nArquivo deletado com sucesso! \n");
 
-			java.awt.Desktop.getDesktop().open(new File(diretorioAcessado)); // abre no explorer a pasta de acordo com o
+			java.awt.Desktop.getDesktop().open(new File(diretorioAcessado)); // abre no explorer a pasta de acordo
+																				// com o
 																				// caminho inserido
 
 		} else
